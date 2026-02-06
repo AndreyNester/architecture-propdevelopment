@@ -1,0 +1,132 @@
+<mxfile host="65bd71144e">
+    <diagram id="HFlSEceN6LcYf6M7V1Ek" name="Page-1">
+        <mxGraphModel dx="3417" dy="1107" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="25" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;dashed=1;dashPattern=8 4;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="160" width="430" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;dashed=1;dashPattern=8 4;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="160" width="560" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;dashed=1;dashPattern=8 4;" vertex="1" parent="1">
+                    <mxGeometry x="-450" y="160" width="125" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Госорганы" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="895" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Партнёры (УК)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="715" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Финансы" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" style="edgeStyle=none;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="15" target="14">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="290" y="250"/>
+                            <mxPoint x="470" y="250"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="35" value="Начисления / платежи" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="34">
+                    <mxGeometry x="-0.8357" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="39" style="edgeStyle=none;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="15" target="13">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="350" y="390"/>
+                            <mxPoint x="745" y="390"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="40" value="Данные домов и лицевых счетов&lt;br&gt;&lt;span style=&quot;color: rgb(63, 63, 63);&quot;&gt;⚠️&lt;/span&gt;Партнёр видит лишние данные" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="39">
+                    <mxGeometry x="-0.3155" y="-1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="Сервис ЖКУ" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="260" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" style="edgeStyle=none;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="16" target="14">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="170" y="250"/>
+                            <mxPoint x="470" y="250"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="30" value="Данные сделок" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="29">
+                    <mxGeometry x="-0.374" y="1" relative="1" as="geometry">
+                        <mxPoint x="-25" y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="36" style="edgeStyle=none;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="16" target="12">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="170" y="220"/>
+                            <mxPoint x="925" y="220"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="38" value="Юридически значимые данные&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;⚠️&lt;/span&gt;Риски онлайн-сделки&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="36">
+                    <mxGeometry x="-0.6695" y="1" relative="1" as="geometry">
+                        <mxPoint x="39" y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="Сервисы продаж&lt;br&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(63, 63, 63); font-size: 11px; text-wrap-mode: nowrap;&quot;&gt;⚠️&lt;/span&gt;Нет master-источника ПДн&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" style="edgeStyle=none;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="19" target="16">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="110" y="250"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="28" value="ПД клиента&lt;div&gt;Данные бронирования&lt;br&gt;⚠️Несколько точек регистрации&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;⚠️&lt;/span&gt;Ошибки аутентификации&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="27">
+                    <mxGeometry x="-0.2694" y="3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="Клиент" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="-402.5" y="220" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=none;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="20" target="15">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-60" y="390"/>
+                            <mxPoint x="290" y="390"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;ПДн собственника&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;Данные ЖКУ&lt;/font&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="31">
+                    <mxGeometry x="-0.4532" y="2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="Собственник" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="-402.5" y="360" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Внешние клиенты" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="-417.5" y="160" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Внутренний контур компании" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="260" y="160" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="Внешние системы" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="803.75" y="175" width="122.5" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="✔️ &lt;span style=&quot;&quot; data-end=&quot;2194&quot; data-start=&quot;2174&quot;&gt;Единый CRM (SoT)&lt;/span&gt;&lt;div&gt;&lt;span data-end=&quot;2194&quot; data-start=&quot;2174&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span data-end=&quot;2194&quot; data-start=&quot;2174&quot;&gt;✔️ &lt;span data-end=&quot;2226&quot; data-start=&quot;2200&quot;&gt;RBAC / API-авторизация&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span data-end=&quot;2194&quot; data-start=&quot;2174&quot;&gt;&lt;span data-end=&quot;2226&quot; data-start=&quot;2200&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span data-end=&quot;2194&quot; data-start=&quot;2174&quot;&gt;&lt;span data-end=&quot;2226&quot; data-start=&quot;2200&quot;&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot; data-end=&quot;2194&quot; data-start=&quot;2174&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot; data-end=&quot;2226&quot; data-start=&quot;2200&quot;&gt;✔️&amp;nbsp;&lt;/span&gt;&lt;/span&gt;Шифрование&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span data-end=&quot;2194&quot; data-start=&quot;2174&quot;&gt;&lt;span data-end=&quot;2226&quot; data-start=&quot;2200&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span data-end=&quot;2194&quot; data-start=&quot;2174&quot;&gt;&lt;span style=&quot;&quot; data-end=&quot;2226&quot; data-start=&quot;2200&quot;&gt;✔️ &lt;span style=&quot;&quot; data-end=&quot;2280&quot; data-start=&quot;2252&quot;&gt;Контроль партнёрских API&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="-450" y="540" width="125" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="Меры защиты ПД" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="-437.5" y="550" width="100" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
