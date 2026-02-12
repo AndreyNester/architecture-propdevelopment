@@ -1,0 +1,61 @@
+# viewer1 (group: view-only) -> cluster-viewer
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: crb-view-only
+subjects:
+  - kind: Group
+    name: view-only
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: cluster-viewer
+  apiGroup: rbac.authorization.k8s.io
+
+---
+# operator-sales1 (group: ops-sales) -> namespace-operator in sales
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: rb-ops-sales-operator
+  namespace: sales
+subjects:
+  - kind: Group
+    name: ops-sales
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: namespace-operator
+  apiGroup: rbac.authorization.k8s.io
+
+---
+# admin1 (group: platform-admins) -> platform-admin
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: crb-platform-admins
+subjects:
+  - kind: Group
+    name: platform-admins
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: platform-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+# (Опционально, но хорошо показывает "привилегированное действие")
+# platform-admins -> secret-reader (явно в sales; хотя platform-admin и так всё может)
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: rb-platform-admins-secret-reader
+  namespace: sales
+subjects:
+  - kind: Group
+    name: platform-admins
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: secret-reader
+  apiGroup: rbac.authorization.k8s.io

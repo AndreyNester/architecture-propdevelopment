@@ -1,0 +1,46 @@
+@startuml
+' C4-PlantUML (Context)
+' https://github.com/plantuml-stdlib/C4-PlantUML
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+title PropDevelopment — C4 Context (Smart Intercom & Smart Barrier)
+
+' --- People ---
+Person_Ext(resident, "Собственник / Жилец", "Пользуется мобильным приложением. Управляет доступом, получает события.")
+Person_Ext(ukOperator, "Оператор УК / Охрана", "Администрирует точки доступа, расследует инциденты (опционально).")
+
+' --- System of interest ---
+System_Boundary(pdBoundary, "Внутренний контур компании") {
+  System(pd, "PropDevelopment Platform", "Backend платформы + мобильное приложение", "Управление доступами жильцов, проверка прав, аудит действий, интеграция с партнёром.")
+}
+
+' --- External systems ---
+System_Ext(smarthome, "Платформа партнёра «Умный дом»", "Внешняя платформа", "Управляет устройствами на объекте, выполняет распознавание (лицо/номер), отдаёт события и статусы.")
+System_Ext(iot, "Устройства на объекте (IoT)", "Домофон/камера/контроллер двери, шлагбаум/камера LPR", "Физический доступ: дверь/ворота/шлагбаум. Обычно под управлением партнёра.")
+
+' --- Relationships ---
+Rel(resident, pd, "Использует", "Моб. приложение / HTTPS")
+Rel(ukOperator, pd, "Администрирует доступы и просматривает журналы", "Web/HTTPS")
+
+Rel(pd, smarthome, "Отправляет команды управления доступом + контекст прав", "API (HTTPS/mTLS)")
+Rel(smarthome, pd, "Отдаёт события/статусы и результаты распознавания (без передачи биометрических шаблонов/изображений)", "Webhooks/API (HTTPS)")
+
+Rel(smarthome, iot, "Управляет устройствами, получает телеметрию/события", "IoT-protocols/VPN")
+Rel(iot, smarthome, "События (звонок, проход, проезд) + поток данных с датчиков/камер", "IoT-protocols")
+
+' --- Notes (optional, but useful for review) ---
+note right of smarthome
+  Риски:
+  - Удалённое управление физическим доступом (дверь/шлагбаум)
+  - Биометрия (лицо) и данные авто (номер)
+  - Критично ограничить передаваемые данные и права
+end note
+
+note bottom of pd
+  Контроль PropDevelopment:
+  - RBAC/ABAC: "пользователь -> объект/точка доступа"
+  - Аудит: кто/когда/что открыл
+  - Минимизация данных к партнёру (только IDs, команды, scopes)
+end note
+
+@enduml
